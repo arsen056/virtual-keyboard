@@ -1,13 +1,15 @@
-export default function create(el, classNames, child, parent, dataAttr) {
+export default function create(el, classNames, child, parent, ...dataAttr) {
   const element = document.createElement(el);
   if (classNames) element.classList.add(...classNames.split(' '));
 
-  if (child && Array.isArray(child)) {
-    child.forEach((e) => element.append(e));
-  } else if (typeof child === 'string') {
-    element.innerHTML = child;
-  } else {
-    element.append(child);
+  if (child) {
+    if (child && Array.isArray(child)) {
+      child.forEach((e) => element.append(e));
+    } else if (typeof child === 'string') {
+      element.innerHTML = child;
+    } else {
+      element.append(child);
+    }
   }
 
   if (parent) {
