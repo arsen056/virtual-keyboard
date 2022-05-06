@@ -141,7 +141,7 @@ export default [
   },
   {
     name: 'Delete',
-    lower: 'Delete',
+    lower: 'Del',
     upper: null,
   },
   {
