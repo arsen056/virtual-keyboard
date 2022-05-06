@@ -24,8 +24,9 @@ export default class Keyboard {
 
   generateKeys(lang) {
     this.btnOrder.forEach((keys) => {
+      this.row = create('div', 'row', '', this.container);
       keys.forEach((btn) => {
-        this.key = create('div', `key ${btn}`, '', this.container);
+        this.key = create('div', `key ${btn}`, '', this.row);
         this.keyRu = create('span', 'rus', '', this.key);
         this.keyEng = create('span', 'eng', '', this.key);
 
@@ -36,7 +37,11 @@ export default class Keyboard {
 
         if (lang === 'ru') {
           this.keyEng.classList.add('hidden');
-        } else { this.keyRu.classList.add('hidden'); }
+          this.keyUpRu.classList.add('hidden');
+        } else {
+          this.keyRu.classList.add('hidden');
+          this.keyUpEn.classList.add('hidden');
+        }
       });
     });
   }
