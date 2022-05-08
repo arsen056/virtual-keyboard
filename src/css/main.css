@@ -82,3 +82,15 @@ body {
 .hidden {
     display: none;
 }
+
+.key.active {
+    background-color: #2CFD72;
+    opacity: 0.8;
+    border-radius: 50px;
+}
+
+.key.caps-active {
+    background-color: #2CFD72;
+    opacity: 0.8;
+    border-radius: 50px;
+}
