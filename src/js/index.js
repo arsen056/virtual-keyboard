@@ -8,6 +8,7 @@ const KeyOrder = [
   ['ShiftLeft', 'KeyZ', 'KeyX', 'KeyC', 'KeyV', 'KeyB', 'KeyN', 'KeyM', 'Comma', 'Point', 'Slash', 'ArrowUp', 'ShiftRight'],
   ['ControlLeft', 'MetaLeft', 'AltLeft', 'Space', 'AltRight', 'ArrowLeft', 'ArrowDown', 'ArrowRight', 'ControlRight'],
 ];
+
 const lang = localStorage.getItem('lang') || 'eng';
 
 new Keyboard(KeyOrder).init().generateKeys(lang);

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Radio+Canada&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -9,12 +11,33 @@
 }
 
 body {
+    font-family: 'Radio Canada', sans-serif;
     background-color: #F1F3F4;
+    padding: 30px;
+}
+
+h1 {
+    text-align: center;
+    padding-bottom: 20px;
 }
 
 .main {
-    max-width: 1280px;
-    margin: 0 auto;
+    max-width: 708px;
+    margin: auto;
+}
+
+.textarea {
+    font-family: inherit;
+    width: 700px;
+    height: 200px;
+    padding: 10px;
+    margin-bottom: 50px;
+    border: 2px solid #333; 
+    border-radius: 5px;   
+}
+
+.textarea:focus {
+    outline: 0;
 }
 
 .keyboard {
@@ -44,6 +67,13 @@ body {
     align-items: center;
     justify-content: center;
     transition: all 0.3s linear;
+    font-size: 18px;
+}
+
+.description {
+    font-size: 25px;
+    text-align: center;
+    padding-top: 35px;
 }
 
 .key:hover {
@@ -93,4 +123,10 @@ body {
     background-color: #2CFD72;
     opacity: 0.8;
     border-radius: 50px;
+}
+
+.CapsLock, .ShiftLeft, .ShiftRight, .Enter, .ControlLeft, .ControlRight, .AltLeft, 
+.AltRight, .Backspace, .Space, .ArrowLeft, .ArrowRight, .ArrowUp, .ArrowDown, .Delete, 
+.Tab, .MetaLeft {
+    background-color: #222222;
 }

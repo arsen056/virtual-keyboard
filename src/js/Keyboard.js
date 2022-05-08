@@ -20,6 +20,7 @@ export default class Keyboard {
   init() {
     this.textarea = create('textarea', 'textarea', '', main, ['placeholder', 'Start typing'], ['rows', 5], ['cols', 50], ['spellcheck', false], ['autocorrect', 'off']);
     this.container = create('div', 'keyboard', '', main, ['language', 'en']);
+    this.description = create('p', 'description', 'Language switching: ctrl + alt', main);
     document.body.prepend(main);
     return this;
   }
