@@ -69,8 +69,8 @@ export default class Keyboard {
     const activeKey = btnKeys.find((e) => e.classList.contains(event.code));
 
     if (event.type === 'keydown') {
-      activeKey.classList.add('active');
-      if (event.type.match(/key/) && !event.code.match(/Alt|Control|Caps|Shift/)) {
+      if (activeKey) activeKey.classList.add('active');
+      if (event.type.match(/key/) && !event.code.match(/Alt|Control|Caps|Shift/) && activeKey) {
         if (event.code.match(/Tab/)) {
           this.textarea.value = `${left}    ${right}`;
           cursor += 4;
@@ -172,7 +172,7 @@ export default class Keyboard {
     }
 
     if (event.type === 'keyup') {
-      activeKey.classList.remove('active');
+      if (activeKey) activeKey.classList.remove('active');
       if (event.code.match(/Control/)) this.ctrlKey = false;
       if (event.code.match(/Alt/)) this.AltKey = false;
 
