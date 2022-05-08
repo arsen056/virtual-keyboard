@@ -160,9 +160,11 @@ export default class Keyboard {
           if (e.firstChild.classList.contains('hidden')) {
             e.firstChild.classList.remove('hidden');
             e.lastChild.classList.add('hidden');
+            localStorage.setItem('lang', 'ru');
           } else {
             e.lastChild.classList.remove('hidden');
             e.firstChild.classList.add('hidden');
+            localStorage.setItem('lang', 'en');
           }
         });
       }
